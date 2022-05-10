@@ -1,0 +1,8 @@
+.Navbar{
+    border: 2px solid rgb(14, 118, 245);
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    margin: auto;
+    align-items: center;
+}
