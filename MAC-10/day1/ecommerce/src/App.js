@@ -8,6 +8,8 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Blog from './Components/Blog/Blog';
 import CartPage from './Components/CartPage/CartPage';
+import ProductType from './Components/ProductType/ProductType';
+import {ProductPage} from './Components/ProductPage/ProductPage';
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
          <Route  path="/" element={ 
            <>
             <LandingPage />
+            <ProductType/>
              
            </>
         }/>
@@ -39,6 +42,11 @@ function App() {
 
       <Routes>
         <Route path="/blog" element={<Blog />} />
+      </Routes>
+
+      
+      <Routes>
+        <Route path="/ProductPage" element={<ProductPage />} />
       </Routes>
 
 

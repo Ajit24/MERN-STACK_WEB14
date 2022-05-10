@@ -14,7 +14,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
       right: -3,
       top: 13,
-      border: `2px solid ${theme.palette.background.paper}`,
+      border: `1px solid ${theme.palette.background.paper}`,
       padding: '0 4px',
     },
   }));
@@ -30,8 +30,8 @@ export default function Navbar() {
     <div>
         <div className='Navbar'>
         <div onClick={() => navigate("/")}>Home</div>
-        <div onClick={() => navigate("/mens_Fashion")}>Men</div>
-        <div onClick={() => navigate("/womens_Fashion")}>Women</div>
+        <div onClick={() => navigate("/ProductPage")}>Men</div>
+        <div onClick={() => navigate("/ProductPage")}>Women</div>
         <div onClick={() => navigate("/blog")}>Blog</div>
         <div onClick={() => navigate("/")}><input type="text" placeholder='Search' /></div>
 
