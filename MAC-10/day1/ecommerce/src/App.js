@@ -10,6 +10,7 @@ import Blog from './Components/Blog/Blog';
 import CartPage from './Components/CartPage/CartPage';
 import ProductType from './Components/ProductType/ProductType';
 import {ProductPage} from './Components/ProductPage/ProductPage';
+import {SingleProductList} from './Components/SingleProduct/SingleProduct';
 
 function App() {
   return (
@@ -47,6 +48,16 @@ function App() {
       
       <Routes>
         <Route path="/ProductPage" element={<ProductPage />} />
+      </Routes>
+
+{/*       
+      <Routes>
+        <Route path="/SingleProduct" element={<SingleProductList/>} />
+      </Routes> */}
+
+      
+      <Routes>
+        <Route path="/SingleProduct/:id" element={<SingleProductList/>} />
       </Routes>
 
 
