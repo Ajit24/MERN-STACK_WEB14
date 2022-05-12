@@ -5,10 +5,11 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import{store} from "../../Redux/Store"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import Avatar from '@mui/material/Avatar';
+import { useSelector } from 'react-redux';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -19,6 +20,9 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     },
   }));
 export default function Navbar() {
+
+  const data = useSelector((store) => store.cart.cart)
+  console.log("datataa", data.length)
 
   const navigate = useNavigate()
 
@@ -41,7 +45,7 @@ export default function Navbar() {
 
         <div onClick={() => navigate("/cart")}>
           <IconButton aria-label="cart">
-            <StyledBadge badgeContent={0} color="secondary">
+            <StyledBadge badgeContent={data.length} color="secondary">
               <ShoppingCartIcon />
             </StyledBadge>
           </IconButton>
