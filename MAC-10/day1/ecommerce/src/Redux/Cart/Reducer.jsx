@@ -1,11 +1,11 @@
-import { DATA_LOADING, DATA_SUCCESS, DATA_FAILURE, ADD_CART, ADD_WISHLIST, DELETE_ITEM_CART } from "./Action"
+import { DATA_LOADING, DATA_SUCCESS, DATA_FAILURE, ADD_CART,DELETE_ITEM_CART, EMPTY_CART } from "./Action"
 
 const initState = {
     loading: false,
     error: false,
     data: [],
     cart: [],
-    wishlist: []
+     
 };
 
 
@@ -26,10 +26,10 @@ export const cartReducer = (store = initState, { type, payload }) => {
 
         case DELETE_ITEM_CART:
             const AfterDeleteCart = store.cart.filter((el) => el.id !== payload)
-            return { ...store, cart : AfterDeleteCart };
+            return { ...store, cart : AfterDeleteCart }; 
 
-        case ADD_WISHLIST:
-            return { ...store, wishlist: [...store.wishlist, payload] };
+            case EMPTY_CART:
+            return { ...store, cart: [] };
 
         default:
             return store;

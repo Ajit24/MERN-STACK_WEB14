@@ -3,7 +3,13 @@ import "./CartPage.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Store } from "redux";
 import { deleteItemCart } from "../../Redux/Cart/Action";
+import { useNavigate } from "react-router";
+
+
+
 export default function CartPage() {
+
+  const navigate = useNavigate()
   const data = useSelector((store) => store.cart.cart);
   console.log("cart frontend", data)
   var total = 0;
@@ -193,7 +199,7 @@ export default function CartPage() {
               </div>
             </form>
             <br></br>
-            <button className="apply">CHECK-OUT</button>
+            <button className="apply" onClick={() => navigate("/checkout")}>CHECK-OUT</button>
           </div>
         </div>
       </div>

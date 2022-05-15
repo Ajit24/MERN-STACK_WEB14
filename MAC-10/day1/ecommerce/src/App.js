@@ -11,6 +11,8 @@ import CartPage from './Components/CartPage/CartPage';
 import ProductType from './Components/ProductType/ProductType';
 import {ProductPage} from './Components/ProductPage/ProductPage';
 import {SingleProductList} from './Components/SingleProduct/SingleProduct';
+import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
+import Payment from './Components/Payment/Payment';
 
 function App() {
   return (
@@ -64,6 +66,16 @@ function App() {
       <Routes>
         <Route path="/cart" element={<CartPage />} />
       </Routes>
+
+      <Routes>
+        <Route path="/checkout" element={< CheckoutPage />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/payment" element={< Payment />} />
+      </Routes>
+
+
     </div>
   );
 }
